@@ -1,0 +1,936 @@
+*{
+  padding:0;
+  margin: 0;
+}
+
+ul {
+  list-style: inside;
+}
+
+.no-touch .col img:hover{
+  -webkit-box-shadow: 0px 4px 20px 6px rgb(131 59 23);
+  -moz-box-shadow: 0px 14px 41px -15px rgba(0,0,0,0.75);
+  box-shadow: 0px 14px 41px -15px rgb(0 0 0 / 75%);
+  margin-bottom: 5px;
+}
+
+.col img{
+transition: all 0.3s ease;
+}
+.card-img-top {
+box-shadow: 0px 14px 41px -15px rgb(0 0 0 / 75%);
+}
+
+
+.front-page {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+.txt-shadow {
+text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
+}
+
+/* ------------------- font  -------------------*/
+
+
+@font-face {
+  font-family: termina;
+  font-weight: 200;
+  src: url("../font/termina-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: termina;
+  font-weight: 300;
+  src: url("../font/termina-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: termina;
+  font-weight: 400;
+  src: url("../font/termina-Medium.otf") format("opentype");
+}
+
+  @font-face {
+    font-family: termina;
+    font-weight: normal;
+    src: url("../font/termina-Bold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: termina;
+    font-weight: bold;
+    src: url("../font/termina-ExtraBold.otf") format("opentype");
+  }
+
+
+  .BOAheading, .CDDheading, .WUXheading {
+    font-family: termina;
+    font-weight: normal;
+  }
+
+  .card-title {
+    font-weight:500!important;
+  }
+
+  #WUX_nav, #CDD_nav, #BOA_nav, #GD_nav {
+    font-family: termina;
+    font-weight: normal;
+  }
+
+  .right-2021, .left-2021, .triangle-2021 {
+    font-family: termina;
+    font-weight: normal;
+  }
+
+  .aboutContainer h4 {
+    font-family: termina;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .aboutContainer p {
+    font-family: termina;
+    font-weight: 300;
+  }
+
+  .aboutContainer ul li {
+    font-family: termina;
+    font-weight: 300;
+  }
+
+  .card-body h5 {
+    font-family: termina;
+    font-weight: 300;
+  }
+
+.borders {
+  border-right: 6px solid white;
+  height: 1200px;
+  margin-top: 58px;
+  float: right;
+  margin-right: 164px;
+}
+
+.borders-r {
+  border-right: 6px solid white;
+  height: 1200px;
+  margin-top: -805px;
+  float: left;
+  margin-left: 164px;
+}
+
+.borders-cdd {
+  border-right: 6px solid white;
+  height: 1170px;
+  margin-top: -1600px;
+  float: left;
+  margin-left: 164px;
+}
+
+#full-screen {
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
+  opacity:0;
+  z-index:9999999;
+}
+
+#trapezoid {
+    border-bottom: 500px solid orange;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 500px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+
+  #base {
+    border-top: 1px solid orange;
+    border-bottom: 50vh solid purple;
+    border-left: 55vw solid transparent;
+    border-right: 55vw solid transparent;
+    content: "";
+    height: 50vh;
+    left: 0;
+    position: absolute;
+    top: 500px;
+    width: 0;
+  }
+
+
+  .triangle {
+    width: 100vw;
+    height: 50%;
+    background: purple;
+    /* clip-path: polygon(0% 100%, 50% 0%, 100% 100%); */
+    clip-path: polygon(50% 0%, 100% 80%, 100% 100%, 0 100%, 0 80%);
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    color: white;
+    background-image: url("../images/CDDbackground72new.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+
+  .left {
+    background-color: orange;
+    width: 50%;
+    height: 100vh;
+    color: white;
+    background-image: url("../images/BOAbackground72.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .aboutContainer ul {
+    list-style-type: none;
+  }
+
+
+  .right {
+    background-color: aqua;
+    width: 50%;
+    height: 100vh;
+    color: white;
+    background-image: url("../images/WUXbackground72.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+
+
+
+    .CDDheading, .WUXheading, .BOAheading {
+      margin-top: 200px;
+      display: none;
+      font-size: 60px;
+      color: white;
+      text-decoration: none;
+    }
+
+
+                 /* hover div to show subheading*/
+
+    .triangle .triangle-2021, .left .left-2021, .right .right-2021{
+    display: none;
+    }
+
+
+    .container {
+      position: relative;
+    }
+
+
+    #defaultCanvas0 {
+      transform: scale(0.5);
+      position: relative;
+      margin-left: -450px;
+      margin-top: -300px;
+      top: 50%;
+      left: 50%;
+      cursor: pointer;
+      transition:all 0.4s ease;
+    }
+
+    #full-screen:hover {
+      cursor: pointer;
+    }
+
+    #canvas-wrapper {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition:all 0.4s ease;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    /* animation  */
+
+    .BOA-students {
+      background-image: url('../images/boa-bg.svg');
+      background-color: #221e1f;
+      background-position: center;
+      /* background-size: cover; */
+      background-repeat: repeat;
+      background-attachment: fixed;
+      /* height: 100vh; turning this on fixes the backgorund image enlargment */
+
+    }
+
+    .CDD-students{
+      background-image: url('../images/cdd-bg.svg');
+      background-color: #231f20;
+      background-position: center;
+      background-size: cover;
+      background-repeat: repeat;
+      background-attachment: fixed;
+            /* height: 100vh; turning this on fixes the backgorund image enlargment */
+    }
+
+    .WUX-students{
+      background-image: url('../images/wux-bg.svg');
+      background-color: #231f20;
+      background-position: center;
+      background-repeat: repeat;
+      background-attachment: fixed;
+            /* height: 100vh; turning this on fixes the backgorund image enlargment */
+    }
+
+  .GD-students {
+    background-image: url('../images/gd-bg.svg');
+    background-color: #231f20;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+
+
+
+
+
+
+    /* bootsrap custom style*/
+
+    .opacity-1 {
+      opacity:0.2!important;
+    }
+
+    .spaces {
+      display: none;
+    }
+
+
+    /* -------------- single student template -------------- */
+
+    .WUXnav_image {
+      width: 100%;
+      height: 300px;
+      background-image: url(../images/WUXbackgorund72.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .CDDnav_image {
+      width: 100%;
+      height: 300px;
+      background-image: url(../images/CDDbackgorund72.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .BOAnav_image {
+      width: 100%;
+      height: 300px;
+      background-image: url(../images/BOAbackgorund72.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      width: 100%;
+      /* background-color: #231f20; */
+      height:auto;
+    }
+
+    .my-nav {
+      display:flex;
+      justify-content: space-between;
+      padding: 30px 30px;
+    }
+
+    .my-navlinks {
+    display: flex;
+    align-items: center;
+    }
+
+    .logo {
+      width:250px;
+    }
+
+  .accordion-info-btn {
+    border-radius: 5px!important;
+    background-color:rgb(66, 66, 66);
+    font-weight: 300;
+  }
+
+  .accordion-item {
+    background-color:rgba(0, 0, 0, 0.42)!important;
+    font-weight: 500!important;
+
+  }
+    button.accordion-info-btn::after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+
+
+
+    .accordion-button:not(.collapsed) {
+    background-color:rgb(66, 66, 66);
+    }
+
+    .WUX-nav {
+      font-size: 17px;
+      text-align: center;
+      list-style-type: none;
+      /* background-color: #231f20; */
+      position: relative;
+      line-height: 40px;
+    }
+
+    .WUX-nav ul {
+        padding: 10px 0;
+        margin: 0;
+    }
+    .WUX-nav li {
+      display: inline-block;
+      vertical-align: text-top;
+    }
+
+    .CDD-nav {
+      font-size: 17px;
+      text-align: center;
+      list-style-type: none;
+      background-color: rgba(137, 79, 159, 1);
+      position: relative;
+      line-height: 40px;
+    }
+    .CDD-nav ul {
+        padding: 10px 0;
+        margin: 0;
+    }
+    .CDD-nav li {
+      display: inline-block;
+      vertical-align: text-top;
+    }
+
+    .BOA-nav {
+      font-size: 17px;
+      text-align: center;
+      list-style-type: none;
+      background-color: rgba(227, 123, 76, 1);
+      position: relative;
+      line-height: 40px;
+    }
+
+
+
+
+
+    .BOA-nav ul {
+        padding: 10px 0;
+        margin: 0;
+    }
+    .BOA-nav li {
+      display: inline-block;
+      vertical-align: text-top;
+    }
+    .nav-link a {
+      padding: 13px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+
+    .WUX-nav, .CDD-nav, .BOA-nav {
+    background-color: #231f20;
+    }
+
+    .nav-left {
+      position: absolute;
+        left: 10px;
+        top: 17px;
+    }
+
+    .nav_active {
+      font-size: 30px;
+    }
+
+    .student_name {
+      color: white;
+      margin-top: 70px;
+      font-weight: bold;
+    }
+
+    .WUXaboutBackgorund {
+      background-color: rgba(152, 211, 221, 0.15);
+      margin-top: 150px;
+    }
+
+    .BOAaboutBackgorund {
+      background-color: rgba(227, 123, 76, 0.15);
+      margin-top: 150px;
+    }
+
+    .CDDaboutBackgorund {
+      background-color: rgba(137, 79, 159, 0.15);
+      margin-top: 150px;
+    }
+
+    .student_image {
+      border-radius: 50%;
+      width: 250px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-top: 50px;
+    }
+
+    .aboutContainer {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .aboutContainer ul {
+      padding-left: 0;
+    }
+    .copyright {
+      background-color: rgba(40, 42, 42, 1);
+      height: auto;
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+    /* .BOAcopyright {
+      background-color: rgba(227, 123, 76, 1);
+      height: auto;
+      text-align: center;
+    }
+    .CDDcopyright {
+      background-color: rgba(137, 79, 159, 1);
+      height: auto;
+      text-align: center;
+    } */
+    .copyrightText {
+      padding: 40px 0;
+    }
+
+    .copyrightText p{
+      margin: 0;
+    }
+
+    .no-touch .triangle:hover .triangle-2021, .no-touch .left:hover .left-2021, .no-touch .right:hover .right-2021{
+      display: inline-block;
+   }
+
+   .no-touch .triangle:hover, .no-touch .left:hover, .no-touch .right:hover {
+    cursor: pointer;
+  }
+
+  .no-touch .triangle:hover .CDDheading, .no-touch .left:hover .BOAheading, .no-touch .right:hover .WUXheading {
+    font-weight: bold;
+  }
+
+  .no-touch #WUX_nav:hover, .no-touch #CDD_nav:hover, .no-touch #BOA_nav:hover, #GD_nav:hover {
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5px;
+  }
+
+  .accordion-button {
+    /* border-radius: 50rem!important; */
+    font-family: termina;
+    margin-top: 20px;
+  }
+
+  .BOAinfo .accordion-item {
+    border-radius: 2rem!important;
+    background-color: rgba(7, 4, 12, 0.7);
+    font-weight: 400;
+    font-family: termina;
+  }
+
+  .WUXinfo .accordion-item {
+    border-radius: 2rem!important;
+    background-color: rgba(7, 4, 12, 0.7);
+    font-weight: 400;
+    font-family: termina;
+  }
+
+  .CDDinfo .accordion-item {
+    border-radius: 2rem!important;
+    background-color: rgba(7, 4, 12, 0.7);
+    font-weight: 400;
+    font-family: termina;
+  }
+
+
+/* Modal Styling - Josh */
+.modal-title {
+  width: 100%;
+  font-size:40px;
+  /* font-weight: bold; */
+  display: inline-block;
+  text-align: center!important;
+  font-family: termina;
+  font-weight: normal;
+}
+
+.modal-footer-WUX, .header-WUX {
+  background-color: rgba(152, 211, 221, 0.15);
+}
+
+.modal-footer-BOA, .header-BOA {
+  background-color: rgba(227, 123, 76, 0.15);
+}
+
+.modal-footer-CDD, .header-CDD {
+  background-color: rgba(137, 79, 159, 0.15);
+}
+
+
+/* Natalias's code 01 */
+.container-portfolio {
+  column-count: 3;
+  padding: 20px;
+}
+
+.image-portfolio {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.image-portfolio img {
+  width: 100%;
+  transition: 0.25s ease-in-out;
+}
+
+.image-portfolio:hover img {
+  transform: scale(1.1);
+}
+
+.modal {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Preview  */
+
+.modal-body {
+  overflow-y: visible !important;
+}
+.preview-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  max-width: 1000px;
+  max-height: 100vh;
+  width: 100%;
+  z-index: 5;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
+.preview-box .show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.preview-box .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 15px 13px 10px;
+}
+.preview-box .details .title {
+  margin-left: 5px;
+  font-weight: 400%;
+  font-size: 18px;
+}
+.details .icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.preview-box .image-box {
+  display: flex;
+  width: 100%;
+
+}
+
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);
+}
+
+.image-box img {
+  width: auto;
+  max-height: 90vh;
+  border-radius: 0 0 3px 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-title {
+  cursor: pointer;
+}
+
+.image-portfolio {
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1700px) {
+  .borders {
+    display: none;
+  }
+
+  .borders-r {
+    display: none;
+  }
+
+  .borders-cdd {
+    display: none;
+  }
+
+  .CDDspaces {
+    display: block;
+  }
+}
+
+/* laptop size */
+
+@media only screen and (max-height: 930px) {
+  .WUXheading,
+  .BOAheading {
+    margin-top: 162px;
+    font-size: 38px;
+  }
+
+  .CDDheading {
+    margin-top: 0;
+    font-size: 38px;
+    flex: 0 0 100%;
+  }
+
+
+  .triangle {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+
+}
+
+/* iphone 8 size */
+
+@media only screen and (max-height: 667px) {
+
+  .WUXheading,
+  .BOAheading {
+    margin-top: 140px;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+
+  .WUXheading,
+  .BOAheading,
+  .CDDheading {
+    font-size: 24px;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .WUXheading,
+  .BOAheading,
+  .CDDheading {
+    font-size: 38px;
+  }
+
+  .spaces {
+    display: block;
+  }
+
+  #defaultCanvas0 {
+    transform: scale(0.5);
+    position: absolute;
+    margin-top: -300px;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+  }
+
+  .triangle {
+    width: 100vw;
+    height: 50%;
+    background: purple;
+    /* clip-path: polygon(0% 100%, 50% 0%, 100% 100%); */
+    clip-path: polygon(50% 0%, 100% 80%, 100% 100%, 0 100%, 0 80%);
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    color: white;
+    background-image: url(../images/CDDbackground72new.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+    @media only screen and (max-width: 768px) {
+      .nav-left {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+      }
+
+      .WUX-nav {
+        height: 140px;
+      }
+
+      .WUX-nav ul {
+        padding-top: 70px;
+      }
+
+      .BOA-nav {
+        height: 140px;
+      }
+
+      .BOA-nav ul {
+        padding-top: 70px;
+      }
+
+      .CDD-nav {
+        height: 140px;
+      }
+
+      .CDD-nav ul {
+        padding-top: 70px;
+      }
+
+      .aboutContainer {
+        padding: 40px;
+      }
+
+      .modal-body {
+        overflow-y: visible !important;
+      }
+
+      .container-portfolio {
+        column-count: 2 !important;
+      }
+    }
+
+     @media only screen and (max-width: 414px) {
+
+       .WUXheading,
+       .BOAheading,
+       .CDDheading {
+         font-size: 24px;
+       }
+
+       .spaces {
+         display: block;
+       }
+
+       .triangle {
+         width: 100vw;
+         height: 50%;
+         background: purple;
+         /* clip-path: polygon(0% 100%, 50% 0%, 100% 100%); */
+         clip-path: polygon(50% 0%, 100% 80%, 100% 100%, 0 100%, 0 80%);
+         position: absolute;
+         bottom: 0%;
+         left: 0%;
+         color: white;
+         background-image: url(../images/CDDbackground72new.png);
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+       }
+
+       #defaultCanvas0 {
+         transform: scale(0.3);
+         position: absolute;
+         margin-top: -298px;
+         margin-left: -450px;
+         top: 50%;
+         left: 50%;
+         cursor: pointer;
+         transition: all 0.3s ease;
+       }
+
+       .container-portfolio {
+         column-count: 1 !important;
+       }
+     }
+
+    @media only screen and (max-width: 375px) {
+      .CDDheading {
+        font-size: 24px;
+
+      }
+
+      .nav-link a {
+        padding: 0px !important;
+      }
+    }
+
+.modal-body,
+ .modal-footer,
+ .modal-header,
+ .modal a,
+ .details,
+ .preview-box{
+  background-color: rgb(46, 46, 46)!important;
+  color:white;
+  border:none;
+  font-family:termina; 
+}
