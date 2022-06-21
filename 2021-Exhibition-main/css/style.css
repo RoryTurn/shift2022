@@ -36,39 +36,28 @@ text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
 
 
 @font-face {
-  font-family: termina;
-  font-weight: 200;
-  src: url("../font/termina-Light.otf") format("opentype");
+  font-family: azonix;
+  font-style: normal;
+  src: url("../font/Azonix.otf") format("opentype");
 }
 
 @font-face {
-  font-family: termina;
-  font-weight: 300;
-  src: url("../font/termina-Regular.otf") format("opentype");
+  font-family: exo-semibold;
+  font-style: bold;
+  src: url("../font/Exo-SemiBold.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: termina;
-  font-weight: 400;
-  src: url("../font/termina-Medium.otf") format("opentype");
+  font-family: exo-bold;
+  font-style: bolder;
+  src: url("../font/Exo-Bold.ttf") format("opentype");
 }
 
-  @font-face {
-    font-family: termina;
-    font-weight: normal;
-    src: url("../font/termina-Bold.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: termina;
-    font-weight: bold;
-    src: url("../font/termina-ExtraBold.otf") format("opentype");
-  }
 
 
   .BOAheading, .CDDheading, .WUXheading {
-    font-family: termina;
-    font-weight: normal;
+    font-family: exo-semibold;
+    font-style: bold;
   }
 
   .card-title {
@@ -76,34 +65,35 @@ text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
   }
 
   #WUX_nav, #CDD_nav, #BOA_nav, #GD_nav {
-    font-family: termina;
-    font-weight: normal;
+    font-family: azonix;
+    font-style: normal;
   }
 
   .right-2021, .left-2021, .triangle-2021 {
-    font-family: termina;
-    font-weight: normal;
+    font-family: exo-semibold;
+    font-style: bold;
   }
 
   .aboutContainer h4 {
-    font-family: termina;
+    font-family: exo-semibold;
+    font-style: bold;
     text-transform: uppercase;
-    font-weight: normal;
+
   }
 
   .aboutContainer p {
-    font-family: termina;
-    font-weight: 300;
+    font-family: exo-semibold;
+    font-style: bold;
   }
 
   .aboutContainer ul li {
-    font-family: termina;
-    font-weight: 300;
+    font-family: exo-semibold;
+    font-style: bold;
   }
 
   .card-body h5 {
-    font-family: termina;
-    font-weight: 300;
+    font-family: exo-semibold;
+    font-style: bold;
   }
 
 .borders {
@@ -227,7 +217,7 @@ text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
     }
 
 
-                 /* hover div to show subheading*/
+     /* hover div to show subheading*/
 
     .triangle .triangle-2021, .left .left-2021, .right .right-2021{
     display: none;
@@ -283,7 +273,7 @@ text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
       background-color: #231f20;
       background-position: center;
       background-size: cover;
-      background-repeat: repeat;
+      background-repeat: no-repeat;
       background-attachment: fixed;
             /* height: 100vh; turning this on fixes the backgorund image enlargment */
     }
@@ -292,7 +282,8 @@ text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
       background-image: url('../images/wux-bg.svg');
       background-color: #231f20;
       background-position: center;
-      background-repeat: repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
       background-attachment: fixed;
             /* height: 100vh; turning this on fixes the backgorund image enlargment */
     }
@@ -559,7 +550,8 @@ text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
 
   .accordion-button {
     /* border-radius: 50rem!important; */
-    font-family: termina;
+    font-family: exo-semibold;
+    font-style: bold;
     margin-top: 20px;
   }
 
@@ -567,21 +559,24 @@ text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
     border-radius: 2rem!important;
     background-color: rgba(7, 4, 12, 0.7);
     font-weight: 400;
-    font-family: termina;
+    font-family: exo-semibold;
+    font-style: bold;
   }
 
   .WUXinfo .accordion-item {
     border-radius: 2rem!important;
     background-color: rgba(7, 4, 12, 0.7);
     font-weight: 400;
-    font-family: termina;
+    font-family: exo-semibold;
+    font-style: bold;
   }
 
   .CDDinfo .accordion-item {
     border-radius: 2rem!important;
     background-color: rgba(7, 4, 12, 0.7);
     font-weight: 400;
-    font-family: termina;
+    font-family: exo-semibold;
+    font-style: bold;
   }
 
 
@@ -592,8 +587,8 @@ text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
   /* font-weight: bold; */
   display: inline-block;
   text-align: center!important;
-  font-family: termina;
-  font-weight: normal;
+  font-family: exo-semibold;
+  font-style: bold;
 }
 
 .modal-footer-WUX, .header-WUX {
@@ -932,5 +927,6 @@ text-shadow: 1px 1px 20px rgba(0,0,0,0.9);
   background-color: rgb(46, 46, 46)!important;
   color:white;
   border:none;
-  font-family:termina; 
+  font-family: exo-semibold;
+  font-style: bold;
 }
